@@ -54,7 +54,17 @@
         .exercise input {
             margin-right: 10px;
         }
+        .math {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.2em;
+            background-color: #eef;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
     </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -65,42 +75,15 @@
 
 <nav>
     <a href="#home">Home</a>
-    <a href="#tutorials">Tutorials</a>
-    <a href="#exercises">Exercises</a>
+    <a href="tutorials.html">Tutorials</a>
+    <a href="exercises.html">Exercises</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <div class="content">
     <div id="home" class="section">
         <h2>Welcome</h2>
-        <p>Hello, I'm Emil, a physicist passionate about mathematics education. This site provides a variety of mathematical tutorials and exercises to help you improve your skills.</p>
-    </div>
-
-    <div id="tutorials" class="section">
-        <h2>Tutorials</h2>
-        <ul>
-            <li><a href="#">Algebra Basics</a></li>
-            <li><a href="#">Calculus Introduction</a></li>
-            <li><a href="#">Linear Algebra</a></li>
-            <!-- More tutorials can be added here -->
-        </ul>
-    </div>
-
-    <div id="exercises" class="section">
-        <h2>Exercises</h2>
-        <div class="exercise">
-            <p>Solve for x: 2x + 3 = 7</p>
-            <input type="number" id="exercise1" placeholder="Your answer">
-            <button onclick="checkAnswer1()">Submit</button>
-            <p id="result1"></p>
-        </div>
-        <div class="exercise">
-            <p>Calculate the derivative of f(x) = x^2</p>
-            <input type="text" id="exercise2" placeholder="Your answer">
-            <button onclick="checkAnswer2()">Submit</button>
-            <p id="result2"></p>
-        </div>
-        <!-- More exercises can be added here -->
+        <p>Hello, I'm Emil, a physicist with a passion for mathematics. I teach math as a part-time job. I graduated from ESACA Academy in 2022 and have experience teaching elementary math at the university level and privately.</p>
     </div>
 
     <div id="contact" class="section">
@@ -112,32 +95,6 @@
 <footer>
     <p>&copy; 2024 Emil's Math Tutorials. All rights reserved.</p>
 </footer>
-
-<script>
-    function checkAnswer1() {
-        const answer = document.getElementById('exercise1').value;
-        const result = document.getElementById('result1');
-        if (answer == 2) {
-            result.textContent = 'Correct!';
-            result.style.color = 'green';
-        } else {
-            result.textContent = 'Try again.';
-            result.style.color = 'red';
-        }
-    }
-
-    function checkAnswer2() {
-        const answer = document.getElementById('exercise2').value;
-        const result = document.getElementById('result2');
-        if (answer.toLowerCase() === '2x') {
-            result.textContent = 'Correct!';
-            result.style.color = 'green';
-        } else {
-            result.textContent = 'Try again.';
-            result.style.color = 'red';
-        }
-    }
-</script>
 
 </body>
 </html>
