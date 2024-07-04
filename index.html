@@ -1,214 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>myMates</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emil's Math Tutorials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #004080;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .exercise {
+            margin-bottom: 20px;
+        }
+        .exercise input {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-<script type="text/javascript" src="scripts/slides_setting.js"></script>
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-green w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="./index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="./activities.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Activities</a>
-    <a href="./appoints.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Appointments</a>
-    <a href="./extrac.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Extracurricular</a>   
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="./aboutus.html" class="w3-bar-item w3-button">About us</a>
-        <a href="./media.html" class="w3-bar-item w3-button">Media</a>
-        <a href="./contact.html" class="w3-bar-item w3-button">Contact</a>
-      </div>
+
+<header>
+    <h1>Emil's Math Tutorials</h1>
+    <p>Learn mathematics with interactive tutorials and exercises</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#tutorials">Tutorials</a>
+    <a href="#exercises">Exercises</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="content">
+    <div id="home" class="section">
+        <h2>Welcome</h2>
+        <p>Hello, I'm Emil, a physicist passionate about mathematics education. This site provides a variety of mathematical tutorials and exercises to help you improve your skills.</p>
     </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-  </div>
+
+    <div id="tutorials" class="section">
+        <h2>Tutorials</h2>
+        <ul>
+            <li><a href="#">Algebra Basics</a></li>
+            <li><a href="#">Calculus Introduction</a></li>
+            <li><a href="#">Linear Algebra</a></li>
+            <!-- More tutorials can be added here -->
+        </ul>
+    </div>
+
+    <div id="exercises" class="section">
+        <h2>Exercises</h2>
+        <div class="exercise">
+            <p>Solve for x: 2x + 3 = 7</p>
+            <input type="number" id="exercise1" placeholder="Your answer">
+            <button onclick="checkAnswer1()">Submit</button>
+            <p id="result1"></p>
+        </div>
+        <div class="exercise">
+            <p>Calculate the derivative of f(x) = x^2</p>
+            <input type="text" id="exercise2" placeholder="Your answer">
+            <button onclick="checkAnswer2()">Submit</button>
+            <p id="result2"></p>
+        </div>
+        <!-- More exercises can be added here -->
+    </div>
+
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <p>You can reach me at: <a href="mailto:emil@example.com">emil@example.com</a></p>
+    </div>
 </div>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="./activities.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Activities</a>
-    <a href="./appoints.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Appointments</a>
-    <a href="./extrac.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Extracurricular</a>
-    <a href="./aboutus.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About us</a>
-    <a href="./media.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Media</a>
-    <a href="./contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-</div>
-
-<div class="w3-content w3-padding-16 w3-center w3-green" style="max-width:1500px;margin-top:40px">
-    <!-- Automatic Slideshow Images -->
-  <div class="w3-container w3-center">
-    <div class="w3-content w3-display-container w3-center" style="max-width:800px">
-        <img class="mySlides" src="images/sleepy.jpg" width="55%">
-        <img class="mySlides" src="images/attraction.png" width="60%">
-        <img class="mySlides" src="images/milkway.png" width="55%">
-        <img class="mySlides" src="images/profile1.png" width="50%">
-        <img class="mySlides" src="images/profile2.png" width="50%">
-        <div class="w3-center w3-display-bottommiddle" style="width:80%">
-          <div class="w3-button w3-black w3-left" onclick="plusDivs(-1)">&#10094;</div>
-          <div class="w3-button w3-black w3-right" onclick="plusDivs(1)">&#10095;</div>
-          <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
-          <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
-          <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
-          <span class="w3-badge demo w3-border" onclick="currentDiv(4)"></span>
-          <span class="w3-badge demo w3-border" onclick="currentDiv(5)"></span>
-        </div>
-    </div>
-  </div>
-</div>
-
-<div class="w3-content w3-container w3-padding-32 w3-center">
-  <div class="w3-content w3-half">
-    <h2>News</h2>
-    <p>Things that happened today and ops maybe yesterday</p>
-        <div class="w3-half">
-          <img src="images/profile1.png" width="50%">
-        </div>
-        <div class="w3-half">
-          <p class="w3-justify">The days are colder and colder. However our fights are dynamic and continue as scheduled.</p>
-          <p class="w3-justify">For more information click <a href="javascript:void(0)">here</a></p>
-        </div>
-  </div>
-  <div class="w3-content w3-half">
-    <h2>Noticias</h2>
-    <p>Las cosas de la vida.</p>
-        <div class="w3-half">
-          <img src="images/profile2.png" width="50%">
-        </div>
-        <div class="w3-half">
-          <p class="w3-justify">The days are colder and colder. However our fights are dynamic and continue as scheduled.</p>
-          <p class="w3-justify">Keep updated <a href="javascript:void(0)">here</a></p>
-        </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <div class="w3-content w3-left w3-padding-small"><h3>Patners:</h3> </div>
-  <div class="w3-container">
-    <div class="w3-quarter">
-      <img src="images/sleepy.jpg" width="50%">
-    </div>
-    <div class="w3-quarter">
-      <img src="images/profile1.png" width="50%">
-    </div>
-    <div class="w3-quarter">
-      <img src="images/nexttime.webp" width="50%">
-    </div>
-    <div class="w3-quarter">
-      <img src="images/profile2.png" width="50%">
-    </div>
-  </div>
-  <div class="w3-container">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-  <!--   <i class="fa fa-whatsapp w3-hover-opacity"></i>
-    <i class="fa fa-signal w3-hover-opacity"></i>
-    <i class="fa fa-telegram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    <p>Today's date: <span id="datum"></span></p>
-  </div>
+<footer>
+    <p>&copy; 2024 Emil's Math Tutorials. All rights reserved.</p>
 </footer>
 
 <script>
-  const date = new Date();
-  var dd = date.getDate();
-  var mm = date.getMonth()+1;
-  var yy = date.getFullYear();
-  if(dd<10) dd='0'+dd;
-  if(mm<10) mm='0'+mm;
-  var currentDate = dd + '-' + mm + '-' + yy;
-  // document.getElementById("datum").innerHTML = d.toDateString();
-  document.getElementById("datum").innerHTML = currentDate;
+    function checkAnswer1() {
+        const answer = document.getElementById('exercise1').value;
+        const result = document.getElementById('result1');
+        if (answer == 2) {
+            result.textContent = 'Correct!';
+            result.style.color = 'green';
+        } else {
+            result.textContent = 'Try again.';
+            result.style.color = 'red';
+        }
+    }
+
+    function checkAnswer2() {
+        const answer = document.getElementById('exercise2').value;
+        const result = document.getElementById('result2');
+        if (answer.toLowerCase() === '2x') {
+            result.textContent = 'Correct!';
+            result.style.color = 'green';
+        } else {
+            result.textContent = 'Try again.';
+            result.style.color = 'red';
+        }
+    }
 </script>
-<script>
-  // Automatic Slideshow - change image every 4 seconds
-  var myIndex = 0;
-  carousel();
-  
-  function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 5000);    
-  }
-  
-  var slideIndex = 1;
-  showDivs(slideIndex);
-  
-  function plusDivs(n) {
-    showDivs(slideIndex += n);
-  }
-  
-  function currentDiv(n) {
-    showDivs(slideIndex = n);
-  }
-  
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-white", "");
-    }
-    x[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " w3-white";
-  }
-  
-  // Used to toggle the menu on small screens when clicking on the menu button
-  function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else { 
-      x.className = x.className.replace(" w3-show", "");
-    }
-  }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  var modal = document.getElementById('ticketModal');
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-  </script>
-  
-  <script>
-      function myMap() {
-      var mapProp= {
-        center:new google.maps.LatLng(50.9243782,13.3370151),
-        zoom:5,
-      };
-      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-      }
-  </script>
-      
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
 </body>
 </html>
