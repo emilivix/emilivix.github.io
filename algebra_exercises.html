@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algebra Basics Exercises - Emil's Math Tutorials</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
 
@@ -16,25 +15,133 @@
 </header>
 
 <nav>
-    <a href="index.html#home">Home</a>
-    <a href="tutorials.html">Tutorials</a>
-    <a href="exercises.html">Exercises</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="../index.html#home">Home</a>
+    <a href="../tutorials.html">Tutorials</a>
+    <a href="../exercises.html">Exercises</a>
+    <a href="../index.html#contact">Contact</a>
 </nav>
 
 <div class="content">
-    <div class="section">
-        <h2>Exercises</h2>
-
-        <div id="exercises-container" class="exercises">
-            <!-- Exercises will be dynamically added here -->
-        </div>
+    <div class="section" id="operators">
+        <h2>Operators</h2>
+        <div id="operators-exercises"></div>
+    </div>
+    <div class="section" id="powers">
+        <h2>Powers</h2>
+        <div id="powers-exercises"></div>
+    </div>
+    <div class="section" id="fractions">
+        <h2>Fractions</h2>
+        <div id="fractions-exercises"></div>
     </div>
 </div>
 
 <footer>
     <p>&copy; 2024 Emil's Math Tutorials. All rights reserved.</p>
 </footer>
+
+<script>
+    // Algebra Basics Exercises
+    const algebraBasicsExercises = {
+        operators: [
+            { question: '\\( 3 + \\frac{1}{2} \\)', answer: 3.5 },
+            { question: '\\( 5 - \\frac{2}{3} \\)', answer: 4.3333 },
+            { question: '\\( \\frac{3}{4} \\times 2 \\)', answer: 1.5 },
+            { question: '\\( 8 \\div \\frac{4}{5} \\)', answer: 10 },
+            { question: '\\( \\frac{2}{3} + \\frac{1}{3} \\)', answer: 1 }
+        ],
+        powers: [
+            { question: '\\( 2^3 \\)', answer: 8 },
+            { question: '\\( 10^{-2} \\)', answer: 0.01 },
+            { question: '\\( \\sqrt{25} \\)', answer: 5 },
+            { question: '\\( 3^2 \\)', answer: 9 },
+            { question: '\\( \\sqrt{144} \\)', answer: 12 }
+        ],
+        fractions: [
+            { question: '\\( \\frac{3}{4} + \\frac{1}{4} \\)', answer: 1 },
+            { question: '\\( \\frac{5}{6} - \\frac{1}{6} \\)', answer: 0.6667 },
+            { question: '\\( \\frac{2}{5} \\times 10 \\)', answer: 4 },
+            { question: '\\( \\frac{7}{8} \\div \\frac{1}{2} \\)', answer: 1.75 },
+            { question: '\\( \\frac{3}{2} + \\frac{1}{3} \\)', answer: 1.8333 }
+        ]
+    };
+
+    // Function to shuffle exercises array
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Randomize exercises
+    const shuffledOperators = shuffle(algebraBasicsExercises.operators);
+    const shuffledPowers = shuffle(algebraBasicsExercises.powers);
+    const shuffledFractions = shuffle(algebraBasicsExercises.fractions);
+
+    // Render exercises
+    const operatorsExercisesContainer = document.getElementById('operators-exercises');
+    const powersExercisesContainer = document.getElementById('powers-exercises');
+    const fractionsExercisesContainer = document.getElementById('fractions-exercises');
+
+    shuffledOperators.forEach((exercise, index) => {
+        const exerciseDiv = document.createElement('div');
+        exerciseDiv.classList.add('exercise');
+
+        const questionElement = document.createElement('p');
+        questionElement.textContent = `Exercise ${index + 1}: ${exercise.question}`;
+        questionElement.classList.add('question');
+        questionElement.style.fontWeight = 'bold';
+
+        exerciseDiv.appendChild(questionElement);
+        operatorsExercisesContainer.appendChild(exerciseDiv);
+    });
+
+    shuffledPowers.forEach((exercise, index) => {
+        const exerciseDiv = document.createElement('div');
+        exerciseDiv.classList.add('exercise');
+
+        const questionElement = document.createElement('p');
+        questionElement.textContent = `Exercise ${index + 1}: ${exercise.question}`;
+        questionElement.classList.add('question');
+        questionElement.style.fontWeight = 'bold';
+
+        exerciseDiv.appendChild(questionElement);
+        powersExercisesContainer.appendChild(exerciseDiv);
+    });
+
+    shuffledFractions.forEach((exercise, index) => {
+        const exerciseDiv = document.createElement('div');
+        exerciseDiv.classList.add('exercise');
+
+        const questionElement = document.createElement('p');
+        questionElement.textContent = `Exercise ${index + 1}: ${exercise.question}`;
+        questionElement.classList.add('question');
+        questionElement.style.fontWeight = 'bold';
+
+        exerciseDiv.appendChild(questionElement);
+        fractionsExercisesContainer.appendChild(exerciseDiv);
+    });
+
+    // MathJax configuration to render LaTeX equations
+    MathJax = {
+        tex: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            tags: 'ams',
+            autoload: {
+                color: [],
+                require: ['input/tex', 'output/chtml']
+            },
+            packages: {
+                '[+]': ['ams', 'color', 'text']
+            }
+        }
+    };
+</script>
 
 </body>
 </html>

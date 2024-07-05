@@ -5,27 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercises - Emil's Math Tutorials</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
 
 <header>
-    <h1>Exercises</h1>
+    <h1>Math Exercises</h1>
 </header>
 
 <nav>
-    <a href="index.html#home">Home</a>
-    <a href="tutorials.html">Tutorials</a>
+    <a href="../index.html#home">Home</a>
+    <a href="../tutorials.html">Tutorials</a>
     <a href="exercises.html">Exercises</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="../index.html#contact">Contact</a>
 </nav>
 
 <div class="content">
-    <div class="section">
-        <h2>Available Exercises</h2>
-        <a href="algebra_exercises.html" class="exercise-link">Algebra Basics Exercises</a>
-        <a href="calculus_exercises.html" class="exercise-link">Calculus Exercises</a>
-        <a href="linear_algebra_exercises.html" class="exercise-link">Linear Algebra Exercises</a>
-        <!-- More exercise links can be added here -->
+    <button class="collapsible">Algebra Basics Exercises</button>
+    <div class="content">
+        <ul>
+            <li><a href="algebra_exercise.html#operators">Operators</a></li>
+            <li><a href="algebra_exercise.html#powers">Powers</a></li>
+            <li><a href="algebra_exercise.html#fractions">Fractions</a></li>
+        </ul>
+    </div>
+
+    <button class="collapsible">Linear Functions Exercises</button>
+    <div class="content">
+        <ul>
+            <li><a href="linear_functions_exercise.html#linear-equations">Linear Equations</a></li>
+            <li><a href="linear_functions_exercise.html#graphing">Graphing</a></li>
+        </ul>
+    </div>
+
+    <button class="collapsible">Quadratic Equations Exercises</button>
+    <div class="content">
+        <ul>
+            <li><a href="quadratic_equations_exercise.html#basics">Basics</a></li>
+            <li><a href="quadratic_equations_exercise.html#graphing">Graphing</a></li>
+        </ul>
     </div>
 </div>
 

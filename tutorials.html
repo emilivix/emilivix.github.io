@@ -5,27 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorials - Emil's Math Tutorials</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
 
 <header>
-    <h1>Tutorials</h1>
+    <h1>Math Tutorials</h1>
 </header>
 
 <nav>
-    <a href="index.html#home">Home</a>
+    <a href="../index.html#home">Home</a>
     <a href="tutorials.html">Tutorials</a>
-    <a href="exercises.html">Exercises</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="../exercises.html">Exercises</a>
+    <a href="../index.html#contact">Contact</a>
 </nav>
 
 <div class="content">
-    <div class="section">
-        <h2>Available Tutorials</h2>
-        <a href="algebra_basics.html" class="tutorial-link">Algebra Basics</a>
-        <a href="calculus_intro.html" class="tutorial-link">Calculus Introduction</a>
-        <a href="linear_algebra.html" class="tutorial-link">Linear Algebra</a>
-        <!-- More tutorial links can be added here -->
+    <button class="collapsible">Algebra Basics</button>
+    <div class="content">
+        <ul>
+            <li><a href="algebra.html#operators">Operators</a></li>
+            <li><a href="algebra.html#powers">Powers</a></li>
+            <li><a href="algebra.html#fractions">Fractions</a></li>
+        </ul>
+    </div>
+
+    <button class="collapsible">Linear Functions</button>
+    <div class="content">
+        <ul>
+            <li><a href="linear_functions.html#linear-equations">Linear Equations</a></li>
+            <li><a href="linear_functions.html#graphing">Graphing</a></li>
+        </ul>
+    </div>
+
+    <button class="collapsible">Quadratic Equations</button>
+    <div class="content">
+        <ul>
+            <li><a href="quadratic_equations.html#basics">Basics</a></li>
+            <li><a href="quadratic_equations.html#graphing">Graphing</a></li>
+        </ul>
     </div>
 </div>
 

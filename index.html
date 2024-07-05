@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emil's Math Tutorials</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
 
 <header>
-    <h1>Emil's Math Tutorials</h1>
-    <p>Learn mathematics with interactive tutorials and exercises</p>
+    <h1>Welcome to Emil's Math Tutorials</h1>
 </header>
 
 <nav>
@@ -22,17 +22,21 @@
     <a href="#contact">Contact</a>
 </nav>
 
-<div class="content">
-    <div id="home" class="section">
-        <h2>Welcome</h2>
-        <p>Hello, I'm Emil, a physicist with a passion for mathematics. I teach math as a part-time job. I graduated from ESACA Academy in 2022 and have experience teaching elementary math at the university level and privately.</p>
-    </div>
+<section id="home">
+    <h2>About Me</h2>
+    <p>
+        Name: Emil<br>
+        Profession: Physicist with a passion for mathematics, teaching math part-time<br>
+        Alma mater: ESACA Academy<br>
+        Graduation year: 2022<br>
+        Experience: Teaching elementary math at university and privately
+    </p>
+</section>
 
-    <div id="contact" class="section">
-        <h2>Contact</h2>
-        <p>You can reach me at: <a href="mailto:emil@example.com">emil@example.com</a></p>
-    </div>
-</div>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: emil@example.com</p>
+</section>
 
 <footer>
     <p>&copy; 2024 Emil's Math Tutorials. All rights reserved.</p>

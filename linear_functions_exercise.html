@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Functions Exercises - Emil's Math Tutorials</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Linear Functions Exercises</h1>
+</header>
+
+<nav>
+    <a href="../index.html#home">Home</a>
+    <a href="../tutorials.html">Tutorials</a>
+    <a href="../exercises.html">Exercises</a>
+    <a href="../index.html#contact">Contact</a>
+</nav>
+
+<div class="content">
+    <div class="section" id="linear-equations">
+        <h2>Linear Equations</h2>
+        <div id="linear-equations-exercises"></div>
+    </div>
+
+    <div class="section" id="graphing">
+        <h2>Graphing Linear Functions</h2>
+        <p>Exercises related to graphing linear functions...</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Emil's Math Tutorials. All rights reserved.</p>
+</footer>
+
+<script>
+    // Linear Equations Exercises
+    const linearEquationsExercises = [
+        { question: 'Find the equation of the line passing through points (1, 2) and (3, 4).', answer: 'y = x + 1' },
+        { question: 'Solve for x: 2x + 3 = 7.', answer: 'x = 2' },
+        { question: 'Find the slope of the line passing through points (5, 1) and (7, 3).', answer: 'slope = 1' }
+        // Add more exercises as needed
+    ];
+
+    // Function to shuffle exercises array
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Randomize exercises
+    const shuffledLinearEquations = shuffle(linearEquationsExercises);
+
+    // Render exercises
+    const linearEquationsExercisesContainer = document.getElementById('linear-equations-exercises');
+
+    shuffledLinearEquations.forEach((exercise, index) => {
+        const exerciseDiv = document.createElement('div');
+        exerciseDiv.classList.add('exercise');
+
+        const questionElement = document.createElement('p');
+        questionElement.textContent = `Exercise ${index + 1}: ${exercise.question}`;
+        questionElement.classList.add('question');
+        questionElement.style.fontWeight = 'bold';
+
+        exerciseDiv.appendChild(questionElement);
+        linearEquationsExercisesContainer.appendChild(exerciseDiv);
+    });
+
+    // MathJax configuration to render LaTeX equations
+    MathJax = {
+        tex: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            tags: 'ams',
+            autoload: {
+                color: [],
+                require: ['input/tex', 'output/chtml']
+            },
+            packages: {
+                '[+]': ['ams', 'color', 'text']
+            }
+        }
+    };
+</script>
+
+</body>
+</html>
