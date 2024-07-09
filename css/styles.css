@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.w3-dark-blue {
+    background-color: #003366 !important;
+}
+
+.logo {
+    max-height: 50px;
+    width: auto;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.w3-sidebar a {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-height: 40px;
+    }
+
+    .w3-bar-item.w3-right {
+        padding: 5px;
+    }
+
+    .w3-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .w3-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
