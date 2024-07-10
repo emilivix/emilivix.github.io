@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../../css/styles.css">
     <script src="../../js/scripts.js" defer></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../js/latex.js"></script>
+    <script src="../../js/exercises.js"></script>
 </head>
 <body>
     <header class="w3-bar w3-card w3-padding w3-dark-blue">
@@ -35,13 +39,7 @@
                         <a href="../../exercises/physics-exercises.html" class="w3-bar-item w3-button">Physics Exercises</a>
                     </div>
                 </div>
-                <div class="subnav">
-                    <button class="subnavbtn">Downloads <i class="fa fa-caret-down"></i></button>
-                    <div class="subnav-content">
-                        <a href="../../downloads.html#classes" class="w3-bar-item w3-button">Classes</a>
-                        <a href="../../downloads.html#exercises" class="w3-bar-item w3-button">Exercises</a>
-                    </div>
-                </div>
+                <a href="../../downloads.html" class="w3-bar-item w3-button pdf-download" >Downloads</a>
             </div>   
             <button class="openbtn" onclick="openNav()">☰ Menu</button>  
         </div>

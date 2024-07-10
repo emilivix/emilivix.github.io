@@ -101,6 +101,24 @@ body {
     .sidebar a {font-size: 18px;}
   }
 
+  .navbar {
+    overflow: hidden;
+    background-color: #333; 
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: darkblue;
+  }
+
   .subnav {
     float: left;
     overflow: hidden;
@@ -140,3 +158,13 @@ body {
   .subnav:hover .subnav-content {
     display: block;
   }
+
+  .pdf-download {
+    font-size: 20px; /* Set the desired font size */
+    color: white;  /* Set the desired color */
+    text-decoration: none; /* Remove underline if desired */
+}
+
+.pdf-download:hover {
+    color: darkblue;  /* Optional: Change color on hover */
+}
