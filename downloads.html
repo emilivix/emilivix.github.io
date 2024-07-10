@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Elementary Mathematics</title>
+    <title>Mathematics Exercises</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="../../css/styles.css">
-    <script src="../../js/scripts.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="js/latex.js"></script>
+    <script src="js/exercises.js"></script>
 </head>
 <body>
     <header class="w3-bar w3-card w3-padding w3-dark-blue">
@@ -16,30 +20,30 @@
                 <div class="subnav">
                     <button class="subnavbtn">Mathematics <i class="fa fa-caret-down"></i></button>
                     <div class="subnav-content ">
-                        <a href="../../tutorials/math/elementary-math.html" class="w3-bar-item w3-button">Elementary Mathematics</a>
-                        <a href="../../tutorials/math/functions-equations.html" class="w3-bar-item w3-button">Functions and Equations</a>
-                        <a href="../../tutorials/math/geometry.html" class="w3-bar-item w3-button">Geometry</a>
+                        <a href="tutorials/math/elementary-math.html" class="w3-bar-item w3-button">Elementary Mathematics</a>
+                        <a href="tutorials/math/functions-equations.html" class="w3-bar-item w3-button">Functions and Equations</a>
+                        <a href="tutorials/math/geometry.html" class="w3-bar-item w3-button">Geometry</a>
                     </div>
                 </div> 
                 <div class="subnav">
                     <button class="subnavbtn">Physics <i class="fa fa-caret-down"></i></button>
                     <div class="subnav-content">
-                        <a href="../../tutorials/physics/mechanics.html" class="w3-bar-item w3-button">Mechanics</a>
-                        <a href="../../tutorials/physics/electrodynamics.html" class="w3-bar-item w3-button">Electrodynamics</a>
+                        <a href="tutorials/physics/mechanics.html" class="w3-bar-item w3-button">Mechanics</a>
+                        <a href="tutorials/physics/electrodynamics.html" class="w3-bar-item w3-button">Electrodynamics</a>
                     </div>
                 </div>
                 <div class="subnav">
                     <button class="subnavbtn">Exercises <i class="fa fa-caret-down"></i></button>
                     <div class="subnav-content">
-                        <a href="../../exercises/math-exercises.html" class="w3-bar-item w3-button">Math Exercises</a>
-                        <a href="../../exercises/physics-exercises.html" class="w3-bar-item w3-button">Physics Exercises</a>
+                        <a href="exercises/math-exercises.html" class="w3-bar-item w3-button">Math Exercises</a>
+                        <a href="exercises/physics-exercises.html" class="w3-bar-item w3-button">Physics Exercises</a>
                     </div>
                 </div>
                 <div class="subnav">
                     <button class="subnavbtn">Downloads <i class="fa fa-caret-down"></i></button>
                     <div class="subnav-content">
-                        <a href="../../downloads.html#classes" class="w3-bar-item w3-button">Classes</a>
-                        <a href="../../downloads.html#exercises" class="w3-bar-item w3-button">Exercises</a>
+                        <a href="downloads.html#classes" class="w3-bar-item w3-button">Classes</a>
+                        <a href="downloads.html#exercises" class="w3-bar-item w3-button">Exercises</a>
                     </div>
                 </div>
             </div>   
@@ -47,8 +51,8 @@
         </div>
 
         <div class="w3-bar-item w3-left">
-            <a href="../../index.html" >
-                <img src="../../images/tubafs.png" alt="Logo" class="logo">
+            <a href="index.html" >
+                <img src="images/tubafs.png" alt="Logo" class="logo">
             </a>
         </div>
         <div class="w3-bar-item w3-right">
@@ -60,25 +64,43 @@
     </header>
     
     <main class="w3-container">
-        <h1>Elementary Math</h1>
+        <div class="classes">
+            <section>
+                <h2>Algebra</h2>
+                <ul>
+                    <li><a href="pdfs/math/classes/elem01.pdf" >Terms and simplifications</a></li>
+                    <li><a href="pdfs/math/classes/elem02.pdf" >Equations</a></li>
+                    <li><a href="pdfs/math/classes/elem03.pdf" >Functions</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Functions</h2>
+                <ul>
+                    <li><a href="pdfs/math/classes/elem01.pdf" >Terms and simplifications</a></li>
+                    <li><a href="pdfs/math/classes/elem02.pdf" >Equations</a></li>
+                    <li><a href="pdfs/math/classes/elem03.pdf" >Functions</a></li>
+                </ul>
+            </section>
+        </div>
         
-        <section>
-            <h2>Introduction to Quadratic Functions and Equations</h2>
-            <p>Quadratic equations are equations of the form:</p>
-            <p>\( f(x) = ax^2 + bx + c \)</p>
-        </section>
-
-        <section>
-            <h2>Example Exercises</h2>
-            <ol>
-                <li>Determine:
-                    <ul>
-                        <li>a) \( 2x - 1 = 7 \)</li>
-                        <li>b) \( \sqrt{x-2} = 1 \)</li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
+        <div class="exercises">
+            <section>
+                <h2>Algebra Exercises</h2>
+                <ul>
+                    <li><a href="pdfs/math/classes/elem01.pdf" >Terms and simplifications</a></li>
+                    <li><a href="pdfs/math/classes/elem02.pdf" >Equations</a></li>
+                    <li><a href="pdfs/math/classes/elem03.pdf" >Functions</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Functions Exercises</h2>
+                <ul>
+                    <li><a href="pdfs/math/classes/elem01.pdf" >Terms and simplifications</a></li>
+                    <li><a href="pdfs/math/classes/elem02.pdf" >Equations</a></li>
+                    <li><a href="pdfs/math/classes/elem03.pdf" >Functions</a></li>
+                </ul>
+            </section>
+        </div>
     </main>
     
     <footer class="w3-container w3-dark-blue w3-center w3-padding">

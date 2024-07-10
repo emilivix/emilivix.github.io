@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mathematics Exercises</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../css/styles.css">
@@ -13,42 +14,59 @@
 </head>
 <body>
     <header class="w3-bar w3-card w3-padding w3-dark-blue">
+        <div class="w3-bar-item w3-right">
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <div class="subnav">
+                    <button class="subnavbtn">Mathematics <i class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content ">
+                        <a href="../tutorials/math/elementary-math.html" class="w3-bar-item w3-button">Elementary Mathematics</a>
+                        <a href="../tutorials/math/functions-equations.html" class="w3-bar-item w3-button">Functions and Equations</a>
+                        <a href="../tutorials/math/geometry.html" class="w3-bar-item w3-button">Geometry</a>
+                    </div>
+                </div> 
+                <div class="subnav">
+                    <button class="subnavbtn">Physics <i class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content">
+                        <a href="../tutorials/physics/mechanics.html" class="w3-bar-item w3-button">Mechanics</a>
+                        <a href="../tutorials/physics/electrodynamics.html" class="w3-bar-item w3-button">Electrodynamics</a>
+                    </div>
+                </div>
+                <div class="subnav">
+                    <button class="subnavbtn">Exercises <i class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content">
+                        <a href="../exercises/math-exercises.html" class="w3-bar-item w3-button">Math Exercises</a>
+                        <a href="../exercises/physics-exercises.html" class="w3-bar-item w3-button">Physics Exercises</a>
+                    </div>
+                </div>
+                <div class="subnav">
+                    <button class="subnavbtn">Downloads <i class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content">
+                        <a href="../downloads.html#classes" class="w3-bar-item w3-button">Classes</a>
+                        <a href="../downloads.html#exercises" class="w3-bar-item w3-button">Exercises</a>
+                    </div>
+                </div>
+            </div>   
+            <!-- <div id="main">
+                <button class="openbtn" onclick="openNav()">☰ Menu</button>  
+            </div> -->
+            <button class="openbtn" onclick="openNav()">☰ Menu</button>  
+        </div>
+
         <div class="w3-bar-item w3-left">
             <a href="../index.html" >
                 <img src="../images/tubafs.png" alt="Logo" class="logo">
             </a>
         </div>
-        <div class="w3-bar-item w3-right">
+        <!-- <div class="w3-bar-item w3-right">
             <span class="w3-button w3-xlarge" onclick="toggleMenu()">☰</span>
-        </div>
+        </div> -->
         <div class="w3-bar-item w3-right">
             <input type="text" placeholder="Search..." class="w3-input">
         </div>
         <div class="w3-bar-item w3-right">
             <button class="w3-button" id="languageBtn">EN</button>
         </div>
-        <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-large" style="display:none" id="mySidebar">
-            <button class="w3-bar-item w3-button w3-large" onclick="toggleMenu()">Close &times;</button>
-            <a href="../index.html" class="w3-bar-item w3-button">Home</a>
-            <div class="w3-dropdown-hover w3-hide-small">
-                <button class="w3-padding-large w3-button" title="Math">Math</button>     
-                <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="../tutorials/math/elementary-math.html" class="w3-bar-item w3-button">Elementary Mathematics</a>
-                    <a href="../tutorials/math/functions-equations.html" class="w3-bar-item w3-button">Functions and Equations</a>
-                    <a href="../tutorials/math/geometry.html" class="w3-bar-item w3-button">Geometry</a>
-                </div>
-                <button class="w3-padding-large w3-button" title="Physics">Physics</button>     
-                <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="../tutorials/physics/mechanics.html" class="w3-bar-item w3-button">Mechanics</a>
-                    <a href="../tutorials/physics/electrodynamics.html" class="w3-bar-item w3-button">Electrodynamics</a>
-                </div>
-                <button class="w3-padding-large w3-button" title="Exercises">Exercises</button>     
-                <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="../exercises/math-exercises.html" class="w3-bar-item w3-button">Math Exercises</a>
-                    <a href="../exercises/physics-exercises.html" class="w3-bar-item w3-button">Physics Exercises</a>
-                </div>
-            </div>
-        </nav>
     </header>
     
     <main class="w3-container">
