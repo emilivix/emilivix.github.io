@@ -168,3 +168,6 @@ body {
 .pdf-download:hover {
     color: darkblue;  /* Optional: Change color on hover */
 }
+li:not(:last-child) {
+  margin-bottom: 20px;
+}
