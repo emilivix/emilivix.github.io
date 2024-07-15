@@ -169,5 +169,5 @@ body {
     color: darkblue;  /* Optional: Change color on hover */
 }
 li:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
