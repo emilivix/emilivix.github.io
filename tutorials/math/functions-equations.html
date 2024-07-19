@@ -49,12 +49,12 @@
                 <img src="../../images/esaca1.png" alt="Logo" class="logo">
             </a>
         </div>
-        <div class="w3-bar-item w3-right">
+        <!-- <div class="w3-bar-item w3-right">
             <input type="text" placeholder="Search..." class="w3-input">
-        </div>
-        <div class="w3-bar-item w3-right">
+        </div> -->
+        <!-- <div class="w3-bar-item w3-right">
             <button class="w3-button" id="languageBtn">EN</button>
-        </div>
+        </div> -->
     </header>
     
     <main class="w3-container">
@@ -84,14 +84,60 @@
             <p>Zur Lösung der quadratische Gleichung \(ax^2+bx+c=0\) wird die allgemeine Formel, bekannt als Mitternachtsformel verwendet.</p>
             <p>\[ x_{\frac{1}{2}} = \frac{-b\pm \sqrt{b^2-4ac}}{2a}\]</p>
             <p>Sollte \(a=1\) oder die Gleichung darauf reduziert, damit es so definiert ist:</p>
-            <p>\[x^2+px+q=0\] wird die folgende abgeleitete Formel verwendet.</p>
+            <p>\[x^2+px+q=0\] wird die folgende abgeleitete Formel (bekannt p-q-Formel) verwendet.</p>
             <p>\[ x_{\frac{1}{2}} = -\frac{p}{2}\pm \sqrt{\left(\frac{p}{2}\right)^2-q} \]</p>
 
+            <h3>Funktionen höheren Grades</h3>
+            <p>Hier muss man zwischen gerade und ungerade Grad. Aks Beispiel teste \(f(x)=x^3\) und \(f(x)=x^4\) im GeoGebra unten.</p>
+
+            <h3>Weitere elementare Funktionen</h3>
+            <ul>
+                <li>Exponentialfunktion: \( f(x) = a^{kx} \)  </li>
+                    <ul>
+                        <li>\(f(x) = 2^x\)</li>
+                    </ul>
+                <li>Logarithmische Funktionen: \( f(x) = \log_b f(x) \) </li>
+                    <ul>
+                        <li>\(f(x) = \log_2 x\)</li>
+                    </ul>
+                <li>Wurzelfunktion: \( f(x) = \sqrt{g(x)} \) </li>
+                    <ul>
+                        <li>\(f(x) = \sqrt{x+1} \)</li>
+                    </ul>
+                <li>Trigonometrische Funktionen: \( f(x) = a\sin(bx+c)+d \) </li>
+                    <ul>
+                        <li>\(f(x) = 2\sin(x)+1 \)</li>
+                        <li>\(f(x) = 2\cos(x+\frac{\pi}{2})-1 \)</li>
+                        <li>\(f(x) = \tan(x) \)</li>
+                    </ul>
+            </ul>
+        </section>
+        <section>
+            <h3>Lineare Gleichungssysteme</h3>
+            <p>Zur Lösung von Gleichungssysteme können folgende Verfahren verwendet werden</p>
+            <ul>
+                <li>Gleichsetzungsverfahren</li>
+                <li>Einsetzungsverfahren</li> 
+                <li>Additionsverfahren</li>
+            </ul>
+        </section>
+        <section>
+            <h3>GeoGebra zum Plotten</h3>
+            <div id="ggb-element"></div>
         </section>
     </main>
     
     <footer class="w3-container w3-dark-blue w3-center w3-padding">
         <p>&copy; 2024 ESACA Academy</p>
     </footer>
+
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script>
+        var params = {"appName": "graphing", "width": 900, "height": 650, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+        var applet = new GGBApplet(params, true);
+        window.addEventListener("load", function() {
+            applet.inject('ggb-element');
+        });
+    </script>
 </body>
 </html>
